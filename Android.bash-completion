@@ -6,6 +6,7 @@ commands[0]="devices"
 commands[1]="logcat"
 commands[2]="kill-server"
 commands[3]="start-server"
+commands[4]="reboot"
 
 # Lists possible android commands
 _android_completion() 
