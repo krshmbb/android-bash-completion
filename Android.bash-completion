@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+#
+# bash completion for basic Android commands
+
+commands[0]="devices"
+commands[1]="logcat"
+commands[2]="kill-server"
+commands[3]="start-server"
+
+# Lists possible android commands
+_android_completion() 
+{
+    cur=${COMP_WORDS[COMP_CWORD]}
+    COMPREPLY=($(compgen -W "${commands[*]}" -- "$cur"))
+    return 0
+}
+
+complete -F _android_completion adb 
